@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{788B2D60-10CF-49CF-93FD-F2C9F3731975}</ProjectGuid>
+    <ProjectGuid>{E358923B-AA4B-4538-B8D5-C5C4CF628404}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>fsm1</RootNamespace>
-    <AssemblyName>fsm1</AssemblyName>
+    <RootNamespace>Shmipl</RootNamespace>
+    <AssemblyName>Shmipl</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -42,23 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimpleFSM\Cursor .cs" />
-    <Compile Include="FSM\Cursor.cs" />
-    <Compile Include="SimpleFSM\FSM.cs" />
-    <Compile Include="FSM\FSM.cs" />
-    <Compile Include="FSM\ID.cs" />
-    <Compile Include="SimpleFSM\StableState.cs" />
-    <Compile Include="SimpleFSM\StateWithFSM.cs" />
-    <Compile Include="FSM\StateWithFSM.cs" />
-    <Compile Include="SimpleFSM\SwitchState.cs" />
-    <Compile Include="FSM\SwitchState.cs" />
-    <Compile Include="FSM\StableState.cs" />
-    <Compile Include="FSM\State.cs" />
+    <Compile Include="FSMFabrica\IFSMFabrica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FSM\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\fsm.csproj">
+      <Project>{788b2d60-10cf-49cf-93fd-f2c9f3731975}</Project>
+      <Name>fsm</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

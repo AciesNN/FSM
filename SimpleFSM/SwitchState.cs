@@ -8,7 +8,7 @@ namespace SimpleFSM
 		public abstract bool Test();
 	}
 
-	public class SwitchState : FSM.SwitchState<String, String>
+	public class SwitchState : BaseFSM.SwitchState<String, String>
 	{
 		public SwitchState(String name)
 			: base(name)

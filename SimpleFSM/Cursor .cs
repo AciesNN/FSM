@@ -4,9 +4,9 @@ using System.Text;
 
 namespace SimpleFSM
 {
-	public class Cursor<STATE_ID>: FSM.Cursor<String>
+	public class Cursor<STATE_ID>: BaseFSM.Cursor<String>
 	{
-		public Cursor(SimpleFSM fsm)
+		public Cursor(FSM fsm)
 			: base(fsm)
 		{
 		} 

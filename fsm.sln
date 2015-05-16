@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Performance3.psess = Performance3.psess
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shmipl", "Shmipl\Shmipl.csproj", "{E358923B-AA4B-4538-B8D5-C5C4CF628404}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{788B2D60-10CF-49CF-93FD-F2C9F3731975}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{788B2D60-10CF-49CF-93FD-F2C9F3731975}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{788B2D60-10CF-49CF-93FD-F2C9F3731975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E358923B-AA4B-4538-B8D5-C5C4CF628404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E358923B-AA4B-4538-B8D5-C5C4CF628404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E358923B-AA4B-4538-B8D5-C5C4CF628404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E358923B-AA4B-4538-B8D5-C5C4CF628404}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

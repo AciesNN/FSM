@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FSM
+namespace BaseFSM
 {
 	public class StateTest
 	{
@@ -11,7 +11,7 @@ namespace FSM
 		}
 	}
 
-	class StateTestFunc : StateTest
+	public class StateTestFunc : StateTest
 	{
 		System.Func<bool> t;
 		public StateTestFunc(System.Func<bool> t) { this.t = t; }

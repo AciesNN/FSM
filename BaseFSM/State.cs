@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FSM
+namespace BaseFSM
 {
 	public struct StateExit<STATE_ID>
 	{

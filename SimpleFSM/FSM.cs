@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace SimpleFSM
 {
-	public class SimpleFSM : FSM.FSM<String>
+	public class FSM : BaseFSM.FSM<String>
 	{
-		public SimpleFSM(string name)
+		public FSM(string name)
 			:base(name)
 		{
 

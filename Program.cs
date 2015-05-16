@@ -12,7 +12,7 @@ enum StatesID
 	SUB_TWO
 }
 
-class StableState : FSM.StableState<StatesID>
+class StableState : BaseFSM.StableState<StatesID>
 {
 	public StableState(StatesID id)
 		: base(id)
@@ -32,7 +32,7 @@ class StableState : FSM.StableState<StatesID>
 	}
 }
 
-class SwitchState : FSM.SwitchState<StatesID, String>
+class SwitchState : BaseFSM.SwitchState<StatesID, String>
 {
 	public SwitchState(StatesID id)
 		: base(id)
@@ -52,7 +52,7 @@ class SwitchState : FSM.SwitchState<StatesID, String>
 	}
 }
 
-class StateWithFSM : FSM.StateWithFSM<StatesID>
+class StateWithFSM : BaseFSM.StateWithFSM<StatesID>
 {
 	public StateWithFSM(StatesID id)
 		: base(id)
@@ -61,7 +61,7 @@ class StateWithFSM : FSM.StateWithFSM<StatesID>
 
 	public override void LoadFSM()
 	{
-		FSM.FSM<StatesID> subFsm = new FSM.FSM<StatesID>("Sub");
+		BaseFSM.FSM<StatesID> subFsm = new BaseFSM.FSM<StatesID>("Sub");
 		subFsm.OnFinish += (x, y) => { System.Console.WriteLine("*** subFSM onFinish()"); };
 
 		SetSubFSM(subFsm);
@@ -86,7 +86,7 @@ class Program
 
 	static void Main(string[] args)
 	{
-		FSM.FSM<StatesID> fsm = new FSM.FSM<StatesID>("Main");
+		BaseFSM.FSM<StatesID> fsm = new BaseFSM.FSM<StatesID>("Main");
 
 		/*************/
 
@@ -115,7 +115,7 @@ class Program
 
 		/////////////
 
-		FSM.Cursor<StatesID> cursor = fsm.GetCursor();
+		BaseFSM.Cursor<StatesID> cursor = fsm.GetCursor();
 		System.Console.WriteLine(cursor);
 
 		fsm.Start();

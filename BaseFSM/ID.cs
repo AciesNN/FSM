@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FSM
+namespace BaseFSM
 {
 	public abstract class ID<T>
 	{

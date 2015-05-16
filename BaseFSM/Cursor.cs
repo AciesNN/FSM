@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FSM
+namespace BaseFSM
 {
 	public class Cursor<STATE_ID>
 	{
@@ -91,22 +91,29 @@ namespace FSM
 		{
 			StringBuilder s = new StringBuilder();
 			s.Append("\n-> \n");
-			foreach (State<STATE_ID> state in curStates)
+			if (curStates.Count > 0)
 			{
-				if (state == null)
+				foreach (State<STATE_ID> state in curStates)
 				{
-					s.Append("<null>\n");
-				}
-				else
-				{
-					if (state.fsm == null)
-						s.Append("<null FSM>");
+					if (state == null)
+					{
+						s.Append("<null>\n");
+					}
 					else
-						s.Append(state.fsm.ToString());
-					s.Append(" : ");
-					s.Append(state.ToString());
-					s.Append(";\n");
+					{
+						if (state.fsm == null)
+							s.Append("<null FSM>");
+						else
+							s.Append(state.fsm.ToString());
+						s.Append(" : ");
+						s.Append(state.ToString());
+						s.Append(";\n");
+					}
 				}
+			}
+			else
+			{
+				s.Append("[null]\n");
 			}
 			return s.ToString();
 		}

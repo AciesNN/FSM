@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FSM
+namespace BaseFSM
 {
 	public class TestAndEvent
 	{
@@ -15,7 +15,7 @@ namespace FSM
 		}
 	}
 
-	class TestAndEventAction : FSM.TestAndEvent
+	public class TestAndEventAction : BaseFSM.TestAndEvent
 	{
 		public System.Func<Object, bool> test;
 		public System.Action<Object> _event;

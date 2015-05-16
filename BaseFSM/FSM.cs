@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FSM
+namespace BaseFSM
 {
 	public class FSM<STATE_ID>: ID<String>
 	{

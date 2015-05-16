@@ -18,6 +18,7 @@ public class FSMModelEditorWindow : EditorWindow {
 
 	public void Init()
 	{
+		
 	}
 
 	void OnGUI()
@@ -81,17 +82,19 @@ public class FSMModelEditorWindow : EditorWindow {
 		BeginWindows();
 
 		for ( int i = 0; i < model.items.Count; ++i )
-			DrowState(i, model.items[i]);
+			DrawState(i, model.items[i]);
 
 		EndWindows();
 	}
 
-	private void DrowState(int i, FSMModel.EditorItem item)
+	private void DrawState(int i, FSMStateModel item)
 	{
+		if (item == null)
+			return;
 		item.position = GUILayout.Window(i, item.position, (id) => StateWndProc(i, item), item.GetType().ToString());
 	}
 
-	private void StateWndProc(int id, FSMModel.EditorItem item)
+	private void StateWndProc(int id, FSMStateModel item)
 	{
 		item.Draw(id);
 		GUI.DragWindow();

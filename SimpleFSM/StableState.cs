@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SimpleFSM
 {
-	public class StableState : FSM.StableState<String>
+	public class StableState : BaseFSM.StableState<String>
 	{
 		public StableState(String name)
 			: base(name)
