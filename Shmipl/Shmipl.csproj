@@ -42,16 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\IContext.cs" />
+    <Compile Include="FSMFabrica\FSMFabrica.cs" />
     <Compile Include="FSMFabrica\IFSMFabrica.cs" />
+    <Compile Include="FSM\FSM.cs" />
+    <Compile Include="FSM\StateTestFunc.cs" />
+    <Compile Include="FSM\TestAndEvent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="FSM\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\fsm.csproj">
       <Project>{788b2d60-10cf-49cf-93fd-f2c9f3731975}</Project>
